@@ -10,7 +10,7 @@ public class Order
     private int OrderID;
     private int AmountBook; // amount books in order
     private double PriceAllOrder; // sum the price of the order
-    private List<Book> BooksInOrder;
+    private List<SupplierBook> BooksInOrder;
     private int SuppID; // id supplier
     private int CustID;
     private boolean deleted;
@@ -18,7 +18,7 @@ public class Order
     //constructor
 
 
-    public Order(int orderID, int amountBook, double priceAllOrder, List<Book> booksInOrder, int suppID, int custID) {
+    public Order(int orderID, int amountBook, double priceAllOrder, List<SupplierBook> booksInOrder, int suppID, int custID) {
         OrderID = orderID;
         AmountBook = amountBook;
         PriceAllOrder = priceAllOrder;
@@ -41,8 +41,8 @@ public class Order
     public double getPriceAllOrder() {return PriceAllOrder;}
     public void setPriceAllOrder(double priceAllOrder) {PriceAllOrder = priceAllOrder;}
 
-    public List<Book> getBooksInOrder() {return BooksInOrder;}
-    public void setBooksInOrder(List<Book> booksInOrder) {BooksInOrder = booksInOrder;}
+    public List<SupplierBook> getBooksInOrder() {return BooksInOrder;}
+    public void setBooksInOrder(List<SupplierBook> booksInOrder) {BooksInOrder = booksInOrder;}
 
     public int getSuppID() {return SuppID;}
     public void setSuppID(int suppID) {SuppID = suppID;}

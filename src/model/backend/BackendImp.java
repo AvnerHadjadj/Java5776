@@ -60,14 +60,6 @@ public class BackendImp implements Backend{
     }
 
     @Override
-    public Book SearchBook(int bookId) throws Exception{
-        for (Book B : getBooks())
-            if (B.getBookId() == bookId)
-                return B;
-        throw (new Exception("The book number " + bookId + " doesn't exist."));
-    }
-
-    @Override
     public void addSupplier(Supplier aSupplier) throws Exception {
         aSupplier.setSuppID(++lastSupplierBookId);
         data.suppliers.add(aSupplier);
@@ -167,22 +159,4 @@ public class BackendImp implements Backend{
         data.supplierBooks.get(supplierBookId).setDeleted(true);
     }
 
-    /**
-     * search book by category in the SupplierBooks list
-     * @param category
-     * @return BooksByCategory, new list of all books in this category
-     * @throws Exception if the new list is empty, no found books in this category
-     */
-    public ArrayList<SupplierBook> getBooksByCategory(BookCategory category) throws Exception
-    {
-        ArrayList<SupplierBook> BooksByCategory = new ArrayList<SupplierBook>();
-        for (SupplierBook B : getSupplierBooks())
-        {
-            if (SearchBook(B.getBookId()).getCategory() == category)
-                BooksByCategory.add(B);
-        }
-        if (BooksByCategory == null) 
-            throw (new Exception("no books in this category"));
-        return BooksByCategory;
-    }
 }

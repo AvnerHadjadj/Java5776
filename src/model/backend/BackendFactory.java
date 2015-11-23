@@ -17,4 +17,7 @@ public class BackendFactory {
         return data;
     }
 
+    public final static Backend getBackend() {
+        return new BackendImp();
+    }
 }

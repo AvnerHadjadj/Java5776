@@ -18,7 +18,6 @@ public interface Backend {
     public ArrayList<Book> getBooks();
     public void updateBook(Book aBook) throws Exception;
     public void deleteBook(int bookId) throws Exception;
-    public Book SearchBook (int bookId) throws Exception;
 
     /**
      * Adds new supplier to the list
