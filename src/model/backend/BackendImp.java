@@ -167,8 +167,6 @@ public class BackendImp implements Backend{
         data.supplierBooks.get(supplierBookId).setDeleted(true);
     }
 
-<<<<<<< HEAD
-=======
     /**
      * search book by category in the SupplierBooks list
      * @param category
@@ -187,5 +185,4 @@ public class BackendImp implements Backend{
             throw (new Exception("no books in this category"));
         return BooksByCategory;
     }
->>>>>>> e206585cef81450eae03606e83fef311c7e1d1ef
 }
