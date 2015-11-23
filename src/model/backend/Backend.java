@@ -18,7 +18,6 @@ public interface Backend {
     public ArrayList<Book> getBooks();
     public void updateBook(Book aBook) throws Exception;
     public void deleteBook(int bookId) throws Exception;
-    public Book SearchBook (int bookId) throws Exception;
 
     /**
      * Adds new supplier to the list
@@ -57,4 +56,10 @@ public interface Backend {
     public void deleteSupplierBook(int supplierBookId);
 
 
+    ///////////////////////////
+    // BUSINESS LAYER METHODS
+
+    public Book SearchBook (int bookId) throws Exception;
+    public SupplierBook SearchSupplierBook (int supplierBookId) throws Exception;
+    public ArrayList<SupplierBook> getBooksByCategory(BookCategory category) throws Exception;
 }
